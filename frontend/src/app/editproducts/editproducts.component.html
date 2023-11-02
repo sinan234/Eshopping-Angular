@@ -1,0 +1,70 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<div class="container mt-5 " id="a">
+  <h3 class="text-center mt-5  mb-5">Edit Product</h3>
+
+  <form #a="ngForm" (ngSubmit)="onsubmit(a)"   >
+    <div >
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="product_id" class="form-label">Product ID</label>
+        <input id="product_id"  name="Product_Id" class="form-control" required="" type="text" [(ngModel)]="Product_Id" >
+      </div>
+      <div class="col-md-6">
+        <label for="product_name" class="form-label">Product Name</label>
+        <input id="product_name"  name="Product_Name" class="form-control" required="" type="text" [(ngModel)]="Product_Name">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="product_categorie" class="form-label">Product Category</label>
+        <select id="product_categorie" name="Product_Category" class="form-control" required="" [(ngModel)]="Product_Category">
+          <option disabled selected>Select Category</option>
+          <option>Sports</option>
+          <option>Clothes</option>
+          <option>Fashion</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="available_quantity" class="form-label"> Quantity</label>
+        <input id="available_quantity"  name="Quantity" class="form-control" required="" type="text" [(ngModel)]="Quantity">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="product_description" class="form-label">Product Description</label>
+      <textarea class="form-control" id="product_description" name="product_description"  [(ngModel)]="product_description"></textarea>
+    </div>
+    
+    <div class="mb-3">
+      <label for="product_description" class="form-label">Product Price</label>
+      <input id="PRICE" name="Product_Price" class="form-control" required="" type="text" [(ngModel)]="Product_Price">
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="percentage_discount" class="form-label">Percentage Discount</label>
+        <input id="percentage_discount" name="Product_Discount" class="form-control" required="" type="text" [(ngModel)]="Product_Discount">
+      </div>
+      <div class="col-md-6">
+        <label for="stock_alert" class="form-label">Product Availability</label>
+        <input id="stock_alert" name="Product_Availability" class="form-control" required="" type="text" [(ngModel)]="Product_Availability">
+      </div>
+    </div>
+
+    
+
+    <div class="mb-3">
+      <label for="image_path" class="form-label">Image Path</label>
+      <input id="image_path" name="Image_Path" class="form-control" required="" type="text" [(ngModel)]="Image_Path"  >
+    </div>
+
+    <div class="text-center">
+      <button id="singlebutton" type="submit" [disabled]="!a.valid" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+  </form>
+</div>

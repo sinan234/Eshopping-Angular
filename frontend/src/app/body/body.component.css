@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Heebo:wght@500&family=Pattaya&display=swap');.custom-margin {
+  margin-left: 5rem;
+}
+
+#d{
+  font-family: 'Heebo', sans-serif;
+  font-size: 50px;
+  position: relative;
+  margin-top: 1rem;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#img{
+  width:50%;
+  mix-blend-mode: multiply;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+
+}
+.text{
+margin-top: 150px;
+margin-left: 30px;
+}
+#heading{
+color: #ed7014;
+font-size: x-large;
+
+}
+p{
+  font-size: large;
+}
+#btn{
+position: relative;
+margin-top: 9px;
+background-color: #ed7014;
+color: white;
+font-family: "Jost", sans-serif;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 1px;
+display: inline-block;
+border-radius: 50px;
+  transition: 0.5s;
+  padding-left: px ;
+
+
+}
+#btn:hover{
+  background-color: #fcb418;
+  color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#a{
+  position: relative;
+  padding-top: 0px;
+  font-size: 48px;
+}
+
+
+#maindiv{
+  scroll-behavior: smooth;
+}
+
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+  top: 130px;
+
+}
+
+.section-bg {
+  background-color: #f3f5fa;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.about .content ul li+li {
+  margin-top: 10px;
+}
+
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #47b2e4;
+  line-height: 1;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .content .btn-learn-more {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #47b2e4;
+  margin-top: 6px;
+  border: 2px solid #47b2e4;
+}
+
+.about .content .btn-learn-more:hover {
+  background: #47b2e4;
+  color: #fff;
+  text-decoration: none;
+}
+
+#about{
+  animation: up-down 2s ease-in-out  both;
+
+}

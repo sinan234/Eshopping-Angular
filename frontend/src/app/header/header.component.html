@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-danger" href="#">eShopping</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " routerLinkActive="active" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="auth.login()" routerLink="/login/products" routerLinkActive="active">Products</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link"*ngIf="auth.login()" routerLink="/login/wishlist" routerLinkActive="active">Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="auth.login()" routerLink="/login/cart"  routerLinkActive="active">  My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="auth.login()" routerLink="/login/orders"  routerLinkActive="active">  My Orders</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#about"  routerLinkActive="active">  About</a>
+          </li> -->
+        
+          <li class="nav-item">
+            <a class="nav-link"  routerLinkActive="active" routerLink="/contact" >Contact us</a>
+
+          </li>
+          
+        </ul>
+        <div class="d-flex p-2 ">
+          <button  id="btn" *ngIf="!auth.login()" class="btn btn-outline-success  " type="button" routerLink="/signup" routerLinkActive="lactive" >Signup</button>
+          <button id="btn" *ngIf="!auth.login()" class="btn btn-outline-success ms-4 me-4 " type="button" routerLink="/login"  routerLinkActive="lactive" (click)="login()">Login</button>
+          <button id="btnab" *ngIf="headerid.IsHomePage() && !auth.login()" class="btn btn-outline-secondary  ms-4 me-4 " type="button" routerLink="/admin/login"  routerLinkActive="lactive" >Admin Login</button>
+
+        </div>
+        <div  class="p-3" *ngIf="auth.login()">
+          <span class="text-success">Welcome {{name.getUserName()}}</span>
+
+        </div>
+       
+       
+      
+        <form class="d-flex" role="search" *ngIf="show">
+          <input  class="form-control me-2" type="text" name="search" aria-label="Search" [(ngModel)]="searchValue" (input)="onSearchtextchanged()">
+          <button id="btn" class="btn btn-outline-success" type="submit" >Search</button>
+        </form>
+        <div class="d-flex p-2 ">
+          <!-- <button *ngIf="auth.login()" class="btn btn-outline-success  " type="button" routerLink="/signup" routerLinkActive="lactive" >Signup</button> -->
+          <button id="btn" *ngIf="auth.login()" class="btn btn-outline-danger ms-4 me-4 " type="button"   routerLinkActive="lactive" (click)="logout()">Logout</button>
+        </div>
+       
+      </div>
+    </div>
+  </nav>  

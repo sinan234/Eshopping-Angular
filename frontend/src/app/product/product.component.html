@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div >
+  <div class="mt-5">
+    <app-filter (Buttonchanged)="radiochanged($event)"  [avail]="getavail()" [call]="getallitems()" [notavail]="getnot()"></app-filter>
+
+  </div>
+
+  
+  <div id="cardc" class="d-flex justify-content-center flex-wrap ms-1 p-1 " >
+    <div *ngFor="let item of products; let i = index"  id="st">
+    <!-- <div [appHighlight]="item.Price=== mostpricedproduct.Price"> -->
+    
+    <div *ngIf=" sr==='' || item.Product_Name.toLowerCase().includes(sr)">
+     <div >
+      <div id="cardp" class="card " style="width: 20rem; height: 30rem;" *ngIf="itemcountradio==='All' || itemcountradio===item.Product_Availbility" >
+        <div class="position-relative">
+          <div id="m"class="text-white bg-danger position-absolute top-0 end-0 p-2">{{item.Product_Discount}}%Off</div>
+          <img id="img" [src]="item.Product_Image" class="card-img-top img-fluid" alt="...">
+        </div>
+      
+        
+
+        <div class="card-body">
+          <h5 id="a" class="card-title">{{item.Product_Name}}</h5>
+          <h5 id="a" class="card-title">Rs {{item. Product_Price}}</h5>
+          <!-- <p class="card-text" [ngStyle]="{color: item.Product_Availbility==='Available'? 'Green' : 'Red'}">{{item.Product_Availbility}}-{{item.Product_Quantity}}</p> -->
+          <p class="card-text">
+            <ng-container *ngIf="item.Product_Quantity>0">
+              <span [ngStyle]="{ color: 'Green' }">{{ item.Product_Availbility>0 ? 'Not Available': 'Available' }} : {{ item.Product_Quantity }}</span>
+            </ng-container>
+            <ng-container *ngIf="item.Product_Quantity<=0">
+              <span [ngStyle]="{ color: 'Red' }">Not available</span>
+            </ng-container>
+          </p>
+         
+          <div class="d-flex ">
+            <a (click)="buy(item.Product_Id, item.Product_Quantity)" class="btn btn-primary me-auto">Buy Now</a>
+            <a (click)="details(item.Product_Id)" class="btn btn-secondary ms-auto"> Details</a>
+  
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+</div>
+   <!-- <div class="d-flex justify-content-center   ">
+    <app-sample1></app-sample1>
+    <app-sample2></app-sample2>
+   </div> -->
+  </div>
+</div>
+
+<!-- <ng-template #appBodyTemplate>
+  <app-body></app-body>
+</ng-template> -->

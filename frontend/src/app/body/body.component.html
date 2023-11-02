@@ -1,0 +1,80 @@
+<!-- <div class="custom-margin " >
+    <div class="d-flex" *ngIf="!buttonClicked" >
+        <div class="text">
+            <h1 id="d" class="mt-5  me-auto">Better Your <br><span class="fw-bold text-primary">E-Commerce</span> </h1>
+        <h4 id="heading" class="text-#ed7014 p-1" >Easier for you</h4>
+        <p class="mt-2" appClickevent > Get all the items necessary within a span of click! </p>
+        <button id="btn" class="btn p-2"  (click)="buttonClicked = !buttonClicked">
+            {{button}}
+        </button>
+        </div>
+        
+        <img id="img" class=" img-fluid w-50  mt-5  rounded-5 mx-auto " src="assets/b.jpg"/> -->
+         
+        
+        <!-- <app-test (emitsearch)="onvalue($event)"></app-test> -->
+        <!-- <p>You have entered {{searchn}}</p> -->
+        <!-- <app-test ></app-test> -->
+    <!-- </div>
+    <ng-container *ngIf="buttonClicked">
+        <app-product [newsearcha]="search"></app-product>
+    </ng-container>
+     -->
+        <!-- <div>
+        <button (click)="hiClicked()"> Hi </button>
+        <div *appIfcase="hi">
+            <h6> Hello </h6>
+        </div>    
+        </div> -->
+<!-- 
+</div> -->
+<div  >
+<app-header></app-header>
+<div class="custom-margin  " @fadeIn id="maindiv" >
+    <div class="d-flex"  >
+        <div class="text ">
+            <div class="p-0" >
+                <h1 id="d" class="mt-5  me-auto">Better Your </h1><br>
+            <h1 id="a" class=" fw-bold text-primary ">E-Commerce </h1>
+            </div>
+            
+        <h4 id="heading" class="text-#ed7014 " >Easier for you</h4>
+        <p class="mt-2" appClickevent > Get all the items necessary within a span of click! </p>
+        <button id="btn" class="btn "  routerLink="/login/products">
+            {{button}}
+        </button>
+        </div>
+        
+        <img id="img" class=" img-fluid animated w-50  mt-5  rounded-5 mx-auto "  src="assets/b.jpg" />
+</div>
+<section id="about" class="about" >
+    <div class="container"  @fadeInUp>
+
+      <div class="section-title">
+        <h2>About Us</h2>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6">
+          <p>
+            Welcome to our e-shopping page! We are a passionate team dedicated to providing you with an exceptional online shopping experience.
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i> At our e-shopping store, we strive to bring you a wide range of high-quality products from various categories, including fashion, electronics, home decor, beauty, and more.</li>
+            <li><i class="ri-check-double-line"></i> We believe in the power of convenience, and that's why we've designed our website to be user-friendly and intuitive. </li>
+            <li><i class="ri-check-double-line"></i>Customer satisfaction is our top priority. Our dedicated support team is always ready to assist you with any inquiries, concerns, or feedback you may have</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <p>
+            Join our e-shopping community today and discover a world of convenience, quality, and style. Thank you for choosing us as your preferred online shopping destination. Happy shopping!"
+          </p>
+          <a  class="btn-learn-more">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+</div>

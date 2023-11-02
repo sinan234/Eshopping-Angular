@@ -1,0 +1,10 @@
+<!-- <div>
+    <input type="text" #input/>
+    <button (click)="onsubmit(input)">Submit</button>
+    <p>You have entered {{text}}</p>
+</div> -->
+
+<div *ngFor="let event of specialevents[0]| keyvalue">
+    <h1>{{event.key}}</h1>
+    <h2> {{event.value}}</h2>
+</div>

@@ -1,0 +1,82 @@
+
+li {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  li::before {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: transparent;
+    background-color: aqua;
+    transition: width 0.5s ease;
+  }
+  
+  li a {
+    display: block;
+    padding: 0.5em 1em;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Small', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s ease;
+  }
+  
+  li:hover a {
+    color: black;
+    position: relative;
+    z-index: 1;
+  }
+  li:hover::before {
+    width: 100%;
+  }
+
+  li:hover {
+    overflow: visible;
+  }
+  
+  .active{
+    background-color: aquamarine;
+  }
+  .lactive{
+    background-color: darkcyan;
+    color: white;
+  }
+  td{
+    position: absolute;
+    top:50%;
+  }
+
+  #btn{
+    font-family: "Jost", sans-serif;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 1px;
+display: inline-block;
+border-radius: 50px;
+opacity: 0.8;
+transition: 0.3s;
+
+  }
+  #btnab{
+    font-family: "Jost", sans-serif;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 1px;
+background-color: white;
+border-radius: 50px;
+opacity: 0.8;
+transition: 0.3s;
+
+
+  }
+  #btnab:hover{
+    background-color: #754ffe;
+    color: white;
+  }
